@@ -16,4 +16,5 @@ def flatten(listname):
     return flattenlist
 
 
+liste = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
 print(flatten(liste))
