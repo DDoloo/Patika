@@ -5,5 +5,15 @@ input: [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
 
 output: [1,'a','cat',2,3,'dog',4,5]
 
+
+flattenlist=[]
 def flatten(listname):
-  flattenlist = [i for list1 in listname for i in list1]
+    for list1 in listname:
+        if type(list1)==list:
+            flatten(list1)
+        else:
+            flattenlist.append(list1)
+    return flattenlist
+
+
+print(flatten(liste))
